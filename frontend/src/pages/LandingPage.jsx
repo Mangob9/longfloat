@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
+import StatsSection from '../components/StatsSection';
+import WhoIsItFor from '../components/WhoIsItFor';
 import ProductsSection from '../components/ProductsSection';
-import PhilosophySection from '../components/PhilosophySection';
+import WhyChooseUs from '../components/WhyChooseUs';
+import Testimonials from '../components/Testimonials';
+import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
 
 export default function LandingPage() {
@@ -21,8 +25,12 @@ export default function LandingPage() {
     <div className="landing-page">
       <Header scrolled={scrolled} />
       <HeroSection />
+      <StatsSection />
+      <WhoIsItFor />
       <ProductsSection />
-      <PhilosophySection />
+      <WhyChooseUs />
+      <Testimonials />
+      <CTASection />
       <Footer />
     </div>
   );

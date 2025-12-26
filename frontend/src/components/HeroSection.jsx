@@ -17,14 +17,14 @@ export default function HeroSection() {
           <Sparkles className="w-8 h-8" strokeWidth={1.5} />
         </div>
 
-        <h1 className="text-6xl lg:text-8xl font-light tracking-tight text-gray-900 mb-6 leading-none animate-fade-in-up">
-          Think better,
+        <h1 className="text-5xl lg:text-7xl font-light tracking-tight text-gray-900 mb-6 leading-tight animate-fade-in-up">
+          From classrooms to boardrooms,
           <br />
-          <span className="text-gray-400">not faster</span>
+          <span className="text-gray-500">AI that works where you do</span>
         </h1>
 
-        <p className="text-lg lg:text-xl text-gray-600 font-light max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up-delayed">
-          Long Float is a calm, intelligent layer over modern work—focused on clarity, thinking, and sustained productivity.
+        <p className="text-lg lg:text-xl text-gray-600 font-light max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up-delayed">
+          Learn, create, and collaborate with AI—trusted by teams, educators, and businesses worldwide.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up-delayed-more">
@@ -32,7 +32,7 @@ export default function HeroSection() {
             size="lg"
             className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-base font-normal rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group"
           >
-            Try Wriety
+            Book a Demo
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
           <Button
@@ -40,7 +40,7 @@ export default function HeroSection() {
             variant="outline"
             className="border-gray-300 hover:border-gray-900 hover:bg-gray-900 hover:text-white px-8 py-6 text-base font-normal rounded-lg transition-all duration-300"
           >
-            See what's coming
+            Explore Products
           </Button>
         </div>
       </div>
