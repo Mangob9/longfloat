@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import WrityHero from '../components/wriety/WrityHero';
-import WrityFeatures from '../components/wriety/WrityFeatures';
+import WrityHeroWithFeatures from '../components/wriety/WrityHeroWithFeatures';
 import WrityFitsIntoWork from '../components/wriety/WrityFitsIntoWork';
 import WrityCTA from '../components/wriety/WrityCTA';
 import Footer from '../components/Footer';
@@ -21,8 +20,7 @@ export default function WrityPage() {
   return (
     <div className="wriety-page">
       <Header scrolled={scrolled} isWrityPage={true} />
-      <WrityHero />
-      <WrityFeatures />
+      <WrityHeroWithFeatures />
       <WrityFitsIntoWork />
       <WrityCTA />
       <Footer />
