@@ -1,21 +1,24 @@
 import React from 'react';
 import { Badge } from './ui/badge';
 import { Card } from './ui/card';
+import { Button } from './ui/button';
 import { Edit3, FileText, LayoutDashboard, Briefcase, ArrowRight } from 'lucide-react';
 
 const products = [
   {
     id: 1,
     name: 'Wriety',
-    description: 'AI-powered whiteboarding and thinking space. Clarity, ideation, and spatial thinking.',
+    description: 'Generate, refine, and structure content with intelligent writing assistance.',
+    subtext: 'Create professional content 10x faster',
     icon: Edit3,
     status: 'live',
     link: '#',
   },
   {
     id: 2,
-    name: 'AI Note Taking',
-    description: 'Intelligent notes that think with you. Capture, connect, and create effortlessly.',
+    name: 'Note Taking AI',
+    description: 'Capture, summarize, and retrieve information with AI-powered organization.',
+    subtext: 'Never lose an important idea again',
     icon: FileText,
     status: 'coming-soon',
     link: null,
@@ -23,15 +26,17 @@ const products = [
   {
     id: 3,
     name: 'Productivity Board',
-    description: 'A unified board for tasks, goals, and momentum. Work that moves forward.',
+    description: 'Manage tasks, ideas, and workflows with intelligent automation.',
+    subtext: 'Boost team productivity by 40%',
     icon: LayoutDashboard,
     status: 'coming-soon',
     link: null,
   },
   {
     id: 4,
-    name: 'AI Appliance for SMEs',
-    description: 'Practical AI tools tailored for small and medium businesses. Simple, powerful, ready.',
+    name: 'AI Appliance for MSMEs',
+    description: 'Automate everyday business operations with purpose-built AI solutions.',
+    subtext: 'Enterprise capabilities at MSME pricing',
     icon: Briefcase,
     status: 'coming-soon',
     link: null,
@@ -44,10 +49,10 @@ export default function ProductsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl lg:text-6xl font-light tracking-tight text-gray-900 mb-6">
-            Our Products
+            The Longfloat AI Ecosystem
           </h2>
           <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
-            Tools designed for people who care about how they think, not just what they produce.
+            A comprehensive suite of AI-powered tools designed to work seamlessly together.
           </p>
         </div>
 
@@ -104,22 +109,31 @@ export default function ProductsSection() {
                   {product.name}
                 </h3>
                 <p
-                  className={`text-base leading-relaxed mb-6 ${
+                  className={`text-base leading-relaxed mb-3 ${
                     isLive ? 'text-gray-600' : 'text-gray-400'
                   }`}
                 >
                   {product.description}
                 </p>
+                <p
+                  className={`text-sm font-light mb-6 ${
+                    isLive ? 'text-gray-500' : 'text-gray-400'
+                  }`}
+                >
+                  {product.subtext}
+                </p>
 
                 {/* CTA for live product */}
                 {isLive && (
-                  <div className="flex items-center text-sm text-gray-900 font-normal group-hover:gap-2 transition-all duration-300">
-                    <span>Explore</span>
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
+                  <Button
+                    variant="ghost"
+                    className="p-0 h-auto text-sm text-gray-900 font-normal hover:bg-transparent group/btn"
+                  >
+                    Try it now
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  </Button>
                 )}
 
-                {/* Subtle hover effect line */}
                 {isLive && (
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                 )}
