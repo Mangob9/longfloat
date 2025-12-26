@@ -3,6 +3,7 @@ import { Badge } from './ui/badge';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Edit3, FileText, LayoutDashboard, Briefcase, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const products = [
   {
@@ -12,7 +13,7 @@ const products = [
     subtext: 'Create professional content 10x faster',
     icon: Edit3,
     status: 'live',
-    link: '#',
+    link: '/wriety',
   },
   {
     id: 2,
@@ -44,6 +45,14 @@ const products = [
 ];
 
 export default function ProductsSection() {
+  const navigate = useNavigate();
+
+  const handleProductClick = (product) => {
+    if (product.link) {
+      navigate(product.link);
+    }
+  };
+
   return (
     <section id="products" className="py-32 px-6 lg:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -64,6 +73,7 @@ export default function ProductsSection() {
             return (
               <Card
                 key={product.id}
+                onClick={() => handleProductClick(product)}
                 className={`group relative overflow-hidden border-gray-200 hover:border-gray-300 transition-all duration-500 p-8 lg:p-10 ${
                   isLive
                     ? 'hover:shadow-2xl hover:-translate-y-2 cursor-pointer bg-white'
